@@ -7,8 +7,12 @@ export default clerkMiddleware((auth, request: NextRequest) => {
   if (url.pathname === "/" || url.pathname === "/site") {
     return NextResponse.rewrite(new URL('/site', request.url));
   }
+
+  if (url.pathname === "/app" || url.pathname === "/app/guides") {
+    return NextResponse.rewrite(new URL('/app', request.url));
+  }
 });
 
 export const config = {
-  matcher: ["/((?!.*\..*|_next).*)", "/", "/(api|trpc)(.*)"],
+  matcher: ["/((?!.*\..*|_next).*)", "/", "/(api|trpc)(.*)", "/app/:path*"],
 };
