@@ -2,7 +2,7 @@ import React from 'react'
 import { cn } from '@/lib/utils'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '../ui/button'
-import { Brain, Heart } from 'lucide-react'
+import { Croissant, Heart } from 'lucide-react'
 import Link from 'next/link';
 import { Progress } from '../ui/progress'
 
@@ -51,7 +51,7 @@ const GuideCard = (props: GuideProps) => {
             })}
           </div>
           <div className='flex items-center gap-2'>
-            <Brain />
+            <Croissant />
             <Button variant={'ghost'} className='w-10 h-10 p-0' aria-label='Add to favorite'>
               <Heart />
             </Button>
