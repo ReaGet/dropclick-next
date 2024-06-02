@@ -4,11 +4,10 @@ import {
   AvatarImage,
 } from '@/components/ui/avatar'
 import {
-  UserRound,
   UsersRound,
   LogOut,
-  KeyRound,
   Settings,
+  LayoutDashboardIcon,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
@@ -20,6 +19,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
+import Link from 'next/link'
 
 const UserNav = () => {
   return (
@@ -43,6 +43,12 @@ const UserNav = () => {
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
+          <Link href="/admin">
+            <DropdownMenuItem className='cursor-pointer'>
+              <LayoutDashboardIcon className='mr-2 w-4 h-4' />
+              <span>Dashboard</span>
+            </DropdownMenuItem>
+          </Link>
           <DropdownMenuItem>
             <Settings className='mr-2 w-4 h-4' />
             <span>Settings</span>
